@@ -9,7 +9,7 @@ app = FastAPI(title="Game Rent API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],      # на деве ок, потом можно сузить
+    allow_origins=["https://game-rent-miniapp.vercel.app"],  # или ["*"] для всех
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
