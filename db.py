@@ -3,8 +3,11 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 from datetime import datetime
 from contextlib import contextmanager
+import os
+
 
 Base = declarative_base()
+
 
 class Item(Base):
     __tablename__ = 'items'
@@ -16,6 +19,7 @@ class Item(Base):
     price_per_day = Column(Float, default=0.0)
     is_available = Column(Boolean, default=True)
     created_at = Column(DateTime, default=datetime.utcnow)
+
 
 class Order(Base):
     __tablename__ = 'orders'
@@ -31,10 +35,13 @@ class Order(Base):
     status = Column(String(20), default='new')  # new, confirmed, delivered
     created_at = Column(DateTime, default=datetime.utcnow)
 
+
 # Инициализация БД
-engine = create_engine('sqlite:///rent.db', connect_args={"check_same_thread": False})
+DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///rent.db")
+engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
 Base.metadata.create_all(engine)
 SessionLocal = sessionmaker(bind=engine)
+
 
 @contextmanager
 def get_session():
