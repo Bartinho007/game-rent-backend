@@ -1,7 +1,7 @@
 const tg = window.Telegram.WebApp;
 tg.expand(); // разворачиваем Mini App на весь экран [web:108]
 
-const API_URL = "https://itchy-impalas-peel.loca.lt"; // пока локально
+const API_URL = "https://game-rent-backend.onrender.com"; // пока локально
 
 const itemsContainer = document.getElementById("itemsContainer");
 const modelInput = document.getElementById("modelFilter");
