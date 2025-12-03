@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111827;
+  color: #f9fafb;
+}
+
+.app {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filters input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.filters button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-card {
+  background: #1f2937;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-meta {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.cart-panel {
+  margin: 12px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #0b1220;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.cart-panel span {
+  opacity: 0.9;
+}
+
+.cart-panel button {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #2563eb;
+  color: #f9fafb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cart-panel button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.add-btn {
+  margin-top: 10px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: none;
+  background: #1d4ed8;
+  color: #f9fafb;
+  font-size: 14px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #2563eb;
+}
+
+.order-form-container {
+  margin-top: 16px;
+  background: #020617;
+  border-radius: 12px;
+  padding: 12px 12px 14px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.order-form-container h2 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.order-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-form-container input {
+  padding: 8px 10px;
+  border-radius: 9px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.order-form-container input::placeholder {
+  color: #6b7280;
+}
+
+.order-form-container button[type="submit"] {
+  margin-top: 4px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: #22c55e;
+  color: #f9fafb;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.order-form-container button[type="submit"]:hover {
+  background: #16a34a;
+}
+
+.cart-items-view {
+  margin: 6px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.cart-item-title {
+  color: #e5e7eb;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cart-item-qty {
+  min-width: 18px;
+  text-align: center;
+}
+
+.qty-btn,
+.remove-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.qty-btn {
+  background: #1d4ed8;
+  color: #f9fafb;
+}
+
+.qty-btn:hover {
+  background: #2563eb;
+}
+
+.remove-btn {
+  background: #ef4444;
+  color: #f9fafb;
+}
+
+
